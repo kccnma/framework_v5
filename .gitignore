@@ -1,0 +1,4 @@
+.DS_Store
+*.config
+*.cfg
+node_modules/
