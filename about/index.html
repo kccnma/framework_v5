@@ -22,8 +22,17 @@
 <body>
     <div class="site-wrapper">
 
-        <iframe class="inc iframe-site-header" scrolling="no" src="/inc/_header.html"
-            onload="this.before((this.contentDocument.body||this.contentDocument).children[0]);this.remove();"></iframe>
+        <header class="site-header">
+            <div class="site-id">
+                <h1><a href="/">Site Name</a></h1>
+            </div>
+            <nav class="site-nav">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about/">About</a></li>
+                </ul>
+            </nav>
+        </header>
 
         <main class="site-main layout-centered">
             <div class="container">
@@ -32,8 +41,17 @@
         </main>
 
 
-        <iframe class="inc iframe-site-footer" scrolling="no" src="/inc/_footer.html"
-            onload="this.before((this.contentDocument.body||this.contentDocument).children[0]);this.remove();"></iframe>
+        <footer class="site-footer">
+            <div class="site-id">
+                <p>Site Name</p>
+            </div>
+            <nav class="bottom-nav">
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about/">About</a></li>
+                </ul>
+            </nav>
+        </footer>
 
     </div>
 
