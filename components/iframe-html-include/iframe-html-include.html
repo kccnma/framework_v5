@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Component</title>
+
+    <meta name="description" content="A HTML + CSS + JS re-usable component." />
+
+    <!-- VIEWPORT FOR MOBILE -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- FOR IE/EDGE -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- MAIN CSS FILE -->
+    <link href="iframe-html-include.css" rel="stylesheet" type="text/css" />
+
+
+
+</head>
+
+<body>
+
+    <iframe class="inc iframe-site-header" scrolling="no" src="inc/_header.html"
+        onload="this.before((this.contentDocument.body||this.contentDocument).children[0]);this.remove();"></iframe>
+
+    <main>
+        <h1>iframe-html-include</h1>
+        <p>A way to import external html files via iframes (and then deleteing the iframes).</p>
+    </main>
+
+
+    <iframe class="inc iframe-site-footer" scrolling="no" src="inc/_footer.html"
+        onload="this.before((this.contentDocument.body||this.contentDocument).children[0]);this.remove();"></iframe>
+
+    </div>
+
+</body>
+
+</html>

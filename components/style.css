@@ -1,0 +1,96 @@
+/* GLOBALS */
+*, *:after, *:before { box-sizing: border-box; }
+html, body { height: 100%; }
+body { margin: 0; }
+
+/* typography */
+body {
+    font-size: 100%;
+    line-height: 1.4;
+}
+
+
+
+.site-wrapper {
+    display: grid;
+    min-height: 100vh;
+    grid-template-rows: auto 1fr auto;
+}
+
+
+
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 .5em;
+}
+
+.site-header a {
+    text-decoration: none;
+}
+
+.site-id h1,
+.site-id h3 {
+    font-size: 1.5em;
+    line-height: 1;
+    margin: 0;
+}
+
+.site-id a {
+    display: block;
+    padding: .25em;
+}
+
+.site-nav ul {
+    display: flex;
+    list-style: none;
+    line-height: 1;
+    margin: 0;
+}
+
+.site-nav li {
+    padding: 0;
+}
+
+.site-nav a {
+    display: block;
+    padding: .625em;
+}
+
+.site-main {
+}
+
+.layout-centered {
+    display: grid;
+    place-items: center;
+}
+
+.container {
+    padding: 0 .5em;
+}
+.site-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+    padding: 0 .5em;
+}
+
+.site-footer a {
+    text-decoration: none;
+}
+
+
+.bottom-nav ul {
+    display: flex;
+    list-style: none;
+    line-height: 1;
+    margin: 0;
+}
+
+.bottom-nav li {
+    padding: 0;
+}
+.bottom-nav a {
+    display: block;
+    padding: .625em;
+}
