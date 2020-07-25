@@ -1,19 +1,24 @@
-/* GLOBALS */
+/* GLOBAL Resets */
 *, *:after, *:before { box-sizing: border-box; }
 html, body { height: 100%; }
 body { margin: 0; }
 
-/* typography */
+/* Set Typographic Default for Body Text */
 body {
-    font-size: 100%;
+    font-size: 87.5%;
     line-height: 1.4;
 }
 
+/* Limit the # of Characters per Line */
 p {
     max-width: 33em;
+    max-width: 65ch;
 }
 
-
+/* enable CSS Scroll to Anchors */
+html {
+    scroll-behavior: smooth;
+}
 
 .site-wrapper {
     position: relative;
@@ -35,10 +40,24 @@ p {
     text-decoration: none;
 }
 
+
+.site-logo {
+    position: fixed;
+    top: .5em;
+}
+
+.site-logo svg {
+    width: 100%;
+}
+
+.site-logo img {
+    display: block;
+}
+
 .site-id h1{
     font-size: 1.5em;
     line-height: 1;
-    margin: 0.7em .5em .5em .5em;
+    margin: .5em 0 0 1.75em;
 }
 
 .site-id a {
@@ -64,7 +83,7 @@ p {
 
 /* SITE NAV */
 .site-nav {
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
   }
@@ -118,6 +137,7 @@ transition-delay: .6s;
     color: white;
 }
 .site-nav .menu-button {
+    font-size: 1em;
     color: rgba(0, 0, 0, 0);
     line-height: 1;
     cursor: pointer;
@@ -208,6 +228,25 @@ transition-delay: .6s;
     padding: .625em;
 }
 
+.page-nav {
+    position: fixed;
+    top: 45%;
+    left: 0;
+}
+
+.page-nav ul {
+    margin: 0;
+    padding: 0 2em;
+}
+
+@media (max-width: 999px) {
+    .page-nav {
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+    }
+  }
+
 .site-main {
 }
 
@@ -223,6 +262,6 @@ section {
 }
 
 .container {
-    padding: 0 1em;
+    padding: 0 3em;
     max-width: 1000px;
 }
