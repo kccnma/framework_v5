@@ -53,6 +53,13 @@ html {
     scroll-behavior: smooth;
 }
 
+/* MEDIA */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+
 .site-wrapper {
     position: relative;
     display: grid;
@@ -102,8 +109,10 @@ html {
 
 .site-logo {
     position: fixed;
-    top: .65em;
-    left: .75em;
+    top: 5px;
+    left: 5px;
+    width: 40px;
+    height: 40px;
 }
 
 .site-logo svg {
@@ -115,14 +124,14 @@ html {
 }
 
 .site-id h1{
-    font-size: 1.5em;
+    font-size: 20px;
     line-height: 1;
-    margin: .65em 0 0 1.85em;
+    margin: 10px 10px 10px 40px;
 }
 
 .site-id a {
     display: block;
-    padding: .25em 0;
+    padding: 5px;
 }
 
 /* .site-nav ul {
@@ -190,25 +199,24 @@ html {
 }
 .site-nav .menu-button {
     position: absolute;
-    top: .2em;
-    right: .2em;
+    top: 5px;
+    right: 5px;
     margin: 0;
-    font-size: 1.5em;
+    font-size: 20px;
     color: rgba(0, 0, 0, 0);
     line-height: 1;
     cursor: pointer;
     display: block;
-    width: 2.5em;
-    height: 2.5em;
-    /* background-color: pink; */
+    width: 40px;
+    height: 40px;
 }
 .site-nav .menu-button::before {
     content: "";
     position: absolute;
     top: 0;
     right: 0;
-    width: 2.4em;
-    height: 2.4em;
+    width: 40px;
+    height: 40px;
     border-radius: 100%;
     display: grid;
     place-items: center;
@@ -219,10 +227,13 @@ html {
     position: absolute;
     top: 0;
     right: 0;
+    width: 40px;
+    height: 40px;
     color: black;
     content: "\2630";
-    padding: .325em;
-    font-size: 1.5em;
+    padding: 5px;
+    font-size: 30px;
+    text-align: center;
     line-height: 1;
     transition: all 0.2s cubic-bezier(0.5, 0, 0.5, 1);
     transform-origin: center;
@@ -232,7 +243,7 @@ html {
 }
 .site-nav .menu-button:hover::after {
     color: white;
-    transform: scale(.85);
+    transform: scale(.7);
     /* font-size: 1em;
     padding: .75em; */
 }
@@ -249,10 +260,11 @@ html {
 }
 .site-nav[data-navstate="open"] .menu-button::after {
     position: fixed;
+    top: 5px;
+    right: 5px;
     content: "\2715";
     transform: rotate(-90deg);
     color: white;
-    padding: .5em;
 }
 .site-nav[data-navstate="open"] ul {
     top: 50%;
@@ -268,7 +280,7 @@ html {
     justify-content: space-between;
     align-items: flex-end;
     padding: .5em;
-    background-color: rgba(0,0,0,.5);
+    background-color: rgba(0,0,0,1);
     color: rgba(255,255,255,.6);
     min-height: 100vh;
     position: sticky;
@@ -415,13 +427,21 @@ html {
 
 section {
     min-height: 100vh;
+    width: 100%;
     display: grid;
     place-items: center;
+    background-color: rgba(0, 0, 0, .05);
+    padding: 6em 0;
+}
+
+section:nth-child(even) {
+    background-color: rgba(0, 0, 0, .1);
 }
 
 .container {
-    margin: 0 3em;
+    margin: 0 60px;
     max-width: 1000px;
+    background-color: salmon;
 }
 
 .hero {
