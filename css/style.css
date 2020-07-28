@@ -1,8 +1,57 @@
-/* NOTES */
 
+/* GLOBAL RESET */
+*, *:after, *:before { box-sizing: border-box; }
+html, body { height: 100%; }
+body { margin: 0; }
 
-/* IMPORTS */
-@import "partials/_globals.css";
+/* Define Global Colors  */
+/* 
+
+color-primary           BLUE    rgba(0, 51, 102, 1)     #003366
+color-primary-dark
+color-primary-light
+
+color-accent
+color-accent-dark
+color-accent-light
+
+color-bg-body
+color-bg-main
+color-bg-header
+color-bg-footer
+
+color-text-body
+color-text-headings
+
+*/
+
+/* Set Global COlors */
+body {
+    background-color: rgba(255,255,255,1);
+    color: rgba(0,0,0,.6);
+}
+a { color: rgba(0,0,0,1); }
+
+/* Set Global Typography */
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 88.75%; /* 14px */
+    line-height: 1.4;
+}
+p { max-width: 35em; }
+a { text-decoration: none; }
+h1, h2, h3 { font-weight: normal;}
+
+/* Limit the # of Characters per Line */
+p {
+    max-width: 33em;
+    max-width: 65ch;
+}
+
+/* enable CSS Scroll to Anchors */
+html {
+    scroll-behavior: smooth;
+}
 
 .site-wrapper {
     position: relative;
