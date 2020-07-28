@@ -205,11 +205,11 @@ transition-delay: .6s;
 .site-nav .menu-button::before {
     position: absolute;
     content: "";
-    top: .45em;
-    right: .4em;
-    width: 2.85em;
-    height: 2.85em;
-    border-radius: 100%;
+    top: .25em;
+    right: .25em;
+    width: 2.5em;
+    height: 2.5em;
+    border-radius: .5em;
     display: grid;
     place-items: center;
     background: rgba(0, 0, 0, 0);
@@ -221,8 +221,9 @@ transition-delay: .6s;
     right: 0;
     color: black;
     content: "\2630";
-    padding: .75em;
+    padding: .5em;
     font-size: 1.5em;
+    line-height: 1;
     transition: all 0.2s cubic-bezier(0.5, 0, 0.5, 1);
 }
 .site-nav .menu-button:hover::before {
@@ -237,6 +238,7 @@ transition-delay: .6s;
 .site-nav[data-navstate="open"] .menu-button::before {
     position: fixed;
     transform: scale(50) translate(-25%);
+    border-radius: 100%;
     min-height: 5vw;
     min-width: 5vw;
     background: black;
