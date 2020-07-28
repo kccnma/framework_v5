@@ -44,11 +44,24 @@ window.addEventListener('DOMContentLoaded', () => {
                     document.querySelector(`.page-nav a[href="#${id}"]`).parentElement.setAttribute('data-pagenavstate', 'inactive');
                 }
             }
+
+            // CHECK IF HERO OR FOOTER IS ACTIVE
+            const mysiteheader = document.querySelector('.site-header');
+            const myhero = document.querySelector('.hero');
+            if (myhero.dataset.sectionstate === 'active') {
+                mysiteheader.setAttribute('data-headerstate', 'dark');
+            } else {
+                mysiteheader.setAttribute('data-headerstate', 'light');
+            }
+
         });
     }, io_options);
     document.querySelectorAll('section[id]').forEach((section) => {
         observer.observe(section);
     });
+
+
+
 
 
 
