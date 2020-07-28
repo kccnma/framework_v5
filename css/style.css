@@ -1,3 +1,10 @@
+/* NOTES */
+
+/* Z-INXDEXES:
+    .site-nav ul = 100
+    .container = 10
+*/
+
 /* IMPORTS */
 @import "partials/_globals.css";
 
@@ -72,7 +79,6 @@
     position: fixed;
     top: -100%;
     left: 50%;
-    z-index: 1;
     height: 50%;
     transform: translate(-50%, -50%);
     margin: 0;
@@ -213,7 +219,6 @@ transition-delay: .6s;
     position: fixed;
     top: 45%;
     left: 0;
-    width: 100%;
 }
 
 .page-nav ul {
@@ -268,7 +273,7 @@ transition-delay: .6s;
 .page-nav a::after {
     content: "\02022";
     position: absolute;
-    right: 16px;
+    left: calc(100vw - 2.75em);
     width: 1em;
     text-align: center;
     transition: all .3s ease-out;
@@ -321,6 +326,4 @@ section {
 .container {
     margin: 0 3em;
     max-width: 1000px;
-    position: relative;
-    z-index: 10;
 }
