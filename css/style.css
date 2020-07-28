@@ -1,24 +1,5 @@
-/* GLOBAL Resets */
-*, *:after, *:before { box-sizing: border-box; }
-html, body { height: 100%; }
-body { margin: 0; }
-
-/* Set Typographic Default for Body Text */
-body {
-    font-size: 87.5%;
-    line-height: 1.4;
-}
-
-/* Limit the # of Characters per Line */
-p {
-    max-width: 33em;
-    max-width: 65ch;
-}
-
-/* enable CSS Scroll to Anchors */
-html {
-    scroll-behavior: smooth;
-}
+/* IMPORTS */
+@import "partials/_globals.css";
 
 .site-wrapper {
     position: relative;
@@ -232,19 +213,95 @@ transition-delay: .6s;
     position: fixed;
     top: 45%;
     left: 0;
+    width: 100%;
 }
 
 .page-nav ul {
     margin: 0;
-    padding: 0 2em;
+    padding: 0;
+    list-style: none;
+    text-transform: uppercase;
+    font-size: .8em;    
 }
 
+.page-nav li {
+    position: relative;
+}
+
+.page-nav a {
+    display: inline-block;
+    padding: .5em 16px;
+    margin: .5em 0;
+    color: rgba(0,0,0,.5);
+    font-weight: bold;
+}
+
+.page-nav a::before {
+    content: "";
+    display: inline-block;
+    width: 8px;
+    position: relative;
+    top: -.4em;
+    left: 6px;
+    margin-right: 16px; 
+    border-top: 1px solid #000;
+    text-align: center;
+    transition: all .3s ease-out;
+    transform-origin: right center;
+}
+
+.page-nav a:hover {
+    color: rgba(0,0,0,1);
+}
+
+.page-nav li[data-pagenavstate="active"] > a  {
+    color: rgba(0,0,0,.8);
+}
+
+.page-nav li[data-pagenavstate="active"] > a::before  {
+    /* width: 16px;
+    border-width: 2px; */
+
+    transform: scale(2.5);
+}
+
+.page-nav a::after {
+    content: "\02022";
+    position: absolute;
+    right: 16px;
+    width: 1em;
+    text-align: center;
+    transition: all .3s ease-out;
+}
+
+.page-nav a:hover::after {
+    transform: scale(3);
+}
+
+.page-nav li[data-pagenavstate="active"] > a::after  {
+    transform: scale(2);
+}
+
+.page-nav span {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  .page-nav a:hover span {
+    position: static;
+    top: auto;
+    left: auto;
+  }
+
 @media (max-width: 999px) {
-    .page-nav {
-      position: absolute;
-      top: -9999px;
-      left: -9999px;
+
+    .page-nav a:hover span {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
     }
+
   }
 
 .site-main {
@@ -262,6 +319,8 @@ section {
 }
 
 .container {
-    padding: 0 3em;
+    margin: 0 3em;
     max-width: 1000px;
+    position: relative;
+    z-index: 10;
 }
