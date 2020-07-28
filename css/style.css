@@ -205,10 +205,10 @@ transition-delay: .6s;
 .site-nav .menu-button::before {
     position: absolute;
     content: "";
-    top: .2875em;
-    right: .1875em;
-    width: 3.1875em;
-    height: 3.1875em;
+    top: .45em;
+    right: .4em;
+    width: 2.85em;
+    height: 2.85em;
     border-radius: 100%;
     display: grid;
     place-items: center;
