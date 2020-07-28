@@ -16,8 +16,8 @@ window.addEventListener('DOMContentLoaded', () => {
 
     // INIT SMOOTH SCROLL
     var scroll = new SmoothScroll('a[href*="#"]', {
-        speed: 100,
-        speedAsDuration: true,
+        // speed: 100,
+        // speedAsDuration: true,
         easing: 'easeInOutQuint'
     });
 
