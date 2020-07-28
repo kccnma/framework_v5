@@ -364,7 +364,7 @@ img {
     padding: 2px 16px;
     margin: 2px 0;
     color: rgba(0,0,0,.5);
-  mix-blend-mode: difference;
+  /* mix-blend-mode: difference; */
 }
 
 .page-nav a::before {
@@ -481,6 +481,10 @@ section:nth-child(even) {
     width: 100%;
 }
 
+
+
+/* SIMPLE GRID SYSTEM */
+@media (min-width: 767px) {
 .row {
     display: flex;
     align-items: center;
@@ -493,4 +497,5 @@ section:nth-child(even) {
 .one-half {
     width: 50%;
     padding: 2%;
+}
 }
