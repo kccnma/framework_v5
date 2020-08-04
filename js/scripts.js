@@ -14,13 +14,6 @@ window.addEventListener('DOMContentLoaded', () => {
         }
     };
 
-    // INIT SMOOTH SCROLL
-    var scroll = new SmoothScroll('a[href*="#"]', {
-        // speed: 100,
-        // speedAsDuration: true,
-        easing: 'easeInQuint'
-    });
-
 
     // SECTION AND PAGE NAV ACTIVE STATE WITH INTERSECTION OBSERVER
     const io_options = {

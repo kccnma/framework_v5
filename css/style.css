@@ -49,9 +49,9 @@ p {
 }
 
 /* enable CSS Scroll to Anchors */
-html {
+/* html {
     scroll-behavior: smooth;
-}
+} */
 
 /* MEDIA */
 img {
@@ -417,35 +417,25 @@ img {
 }
 
 .page-nav a::after {
-    content: "\02022";
+    content: "";
     position: absolute;
-    left: calc(100vw - 36px);
-    width: 16px;
+    left: calc(100vw - 45px);
+    width: 5px;
+    height: 5px;
+    margin: 0 2px;
+    border-radius: 100%;
+    background-color: rgba(0,0,0,.5);
     text-align: center;
     transition: all .3s ease-out;
 }
 
-.page-nav a:hover::after {
-    /* transform: scale(3); */
-    /* background-color: red; */
-
-}
 
 .page-nav li[data-pagenavstate="active"] > a::after  {
-    transform: scale(2);
+    width: 9px;
+    height: 9px;
+    margin: 0;
+    background-color: rgba(0,0,0,1);
 }
-
-/* .page-nav span {
-    position: absolute;
-    top: -9999px;
-    left: -9999px;
-  }
-
-  .page-nav a:hover span {
-    position: static;
-    top: auto;
-    left: auto;
-  } */
 
 @media (max-width: 1300px) {
 
@@ -455,11 +445,6 @@ img {
         left: -9999px;
       }
 
-    /* .page-nav a:hover span {
-        position: absolute;
-        top: -9999px;
-        left: -9999px;
-    } */
 
   }
 
