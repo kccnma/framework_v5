@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Component</title>
+
+    <meta name="description" content="A HTML + CSS + JS re-usable component." />
+
+    <!-- VIEWPORT FOR MOBILE -->
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- FOR IE/EDGE -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <!-- FOR DEMO PURPOSES -->
+    <style>
+        pre {
+            white-space: pre-wrap;
+            /* css-3 */
+            white-space: -moz-pre-wrap;
+            /* Mozilla, since 1999 */
+            white-space: -pre-wrap;
+            /* Opera 4-6 */
+            white-space: -o-pre-wrap;
+            /* Opera 7 */
+            word-wrap: break-word;
+            /* Internet Explorer 5.5+ */
+        }
+    </style>
+
+    <!-- MAIN CSS FILE -->
+    <link href="site-wrapper.css" rel="stylesheet" type="text/css" />
+
+
+
+</head>
+
+<body>
+
+    <div class="site-wrapper">
+
+        <h1>.site-wrapper</h1>
+        <p>A way to wrap your entire site in order to avoid using the <code>&lt;body&gt;</code> element
+            for things like <code>display: grid;</code> and to avoid potential 3rd-party plugin conflicts.</p>
+        <p>Can be useful when using grid for the main structural layout of your site. For example, this is one way to
+            keep the site's footer on the bottom of short pages with minimal content.</p>
+
+        <h2>HTML</h2>
+        <pre><code>
+&lt;body&gt;
+  
+  &lt;div class="site-wrapper&gt;
+
+    &lt;header class="site-header"&gt;&lt;/header&gt;
+
+    &lt;main class="site-main"&gt;&lt;/main&gt;
+
+    &lt;footer class="site-footer"&gt;&lt;/footer&gt;
+
+  &lt;/div&gt;
+
+&lt;/body&gt;
+        </code></pre>
+
+
+
+        <h2>CSS</h2>
+        <pre><code>
+/* site wrapper */
+.site-wrapper {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    grid-template-areas:
+      "top"
+      "mid"
+      "bottom";
+    position: relative;
+    min-height: 100vh;
+}
+
+.site-header {
+    grid-area: top;
+}
+.site-main {
+    grid-area: mid;
+}
+.site-footer {
+    grid-area: bottom;
+}
+
+    </code></pre>
+
+    </div>
+
+</body>
+
+</html>
