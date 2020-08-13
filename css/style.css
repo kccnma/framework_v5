@@ -29,6 +29,64 @@ body { margin: 0; }
     --color-white-light:rgba(255,255,255,.5); /* var(--color-white-light)  */
 
 }
+
+
+.bg-blue { background-color: #68ACD9; }
+.bg-sky { background-color: #4AC0ED; }
+.bg-green { background-color: #63BDA4; }
+.bg-lime { background-color: #B3CD4D; }
+.bg-orange { background-color: #E2BE28; }
+.bg-peach { background-color: #F5AD6D; }
+.bg-red { background-color: #EE6D72; }
+.bg-pink { background-color: #EA5779; }
+.bg-purple { background-color: #E29FC6; }
+
+.grid-of-cards {
+    list-style: none;
+    width: 100%;
+    margin: 0;
+    padding: 1em;
+    background: white;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 1em;
+}
+
+.grid-of-cards li {
+    background: pink;
+}
+
+.grid-of-cards a { 
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: .5em;
+    color: rgba(255,255,255,1);
+    font-size: 3vw; 
+    transition: all .2s ease-out;
+}
+.grid-of-cards a span { 
+    font-size: .14px;
+    font-size: .8rem;
+    color: rgba(255,255,255,.5); 
+}
+
+.grid-of-cards a:hover {
+    transform: scale(1.01);
+}
+
+.grid-of-cards.inline {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: none;
+    min-height: 10em;
+}
+.grid-of-cards.inline a {
+    font-size: 1em; 
+}
+
 /* Set Global Colors */
 body {
     background-color: rgb(255,255,255);
@@ -518,12 +576,21 @@ section {
     width: 100%;
     display: grid;
     place-items: center;
-    background-color: rgba(0, 0, 0, .05);
+    background-color: rgba(0, 0, 0, 0);
     padding: 6em 0;
 }
 
 section:nth-child(even) {
-    background-color: rgba(0, 0, 0, .1);
+    background-color: rgba(0, 0, 0, .05);
+}
+
+section.full-size {
+    padding: 0;
+    background-color: none;
+}
+
+section.not-full-height {
+    min-height: 0;
 }
 
 .container {
@@ -561,7 +628,7 @@ section:nth-child(even) {
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: .8em;
-    padding: 1em 0;
+    padding: .5em 0;
     margin-bottom: 2em;
     color: rgba(255,255,255,.5);
     border-bottom: 2px solid rgba(255,255,255,.5);
