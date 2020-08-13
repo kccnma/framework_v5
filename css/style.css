@@ -573,6 +573,7 @@ section:nth-child(even) {
 
 #page-home .hero .container {
     margin: 0 60px;
+    padding: 5vh 0;
     width: auto;
 }
 
