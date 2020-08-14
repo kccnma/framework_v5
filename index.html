@@ -40,37 +40,79 @@
                 <h2 class="menu-button">Menu</h2>
                 <ul>
                     <li><a href="index.html">Home</a></li>
-                    <li><a href="about/index.html">About</a></li>
+                    <li><a href="about/index.html">About Us</a></li>
+                    <li class="sub-nav">
+                        <ul>
+                            <li><a href="#" class="bg-blue">Meta<span> Sub Page</span></a></li>
+                            <li><a href="#" class="bg-sky">Meta<span> Sub Page</span></a></li>
+                            <li><a href="#" class="bg-green">Meta<span> Sub Page</span></a></li>
+                            <li><a href="#" class="bg-lime">Meta<span> Sub Page</span></a></li>
+                            <li><a href="#" class="bg-orange">Meta<span> Sub Page</span></a></li>
+                            <li><a href="#" class="bg-peach">Meta<span> Sub Page</span></a></li>
+                            <li><a href="#" class="bg-red">Meta<span> Sub Page</span></a></li>
+                            <li><a href="#" class="bg-pink">Meta<span> Sub Page</span></a></li>
+                            <li><a href="#" class="bg-purple">Meta<span> Sub Page</span></a></li>
+                        </ul>
+                    </li>
                 </ul>
             </nav>
         </header>
 
-        <main class="site-main">
+        <main id="top" class="site-main">
 
-            <section id="top" class="hero darksection">
+            <section class="hero">
                 <div class="container">
+                    <svg version="1.1" class="nma-svg-logo-white-trans" xmlns="http://www.w3.org/2000/svg" x="0" y="0"
+                        viewBox="0 0 1189 350" xml:space="preserve">
+                        <style>
+                            .nma-svg-logo-white-trans {
+                                padding: 2em .5vw;
+                            }
+
+                            .color-svg-white {
+                                fill: #fff;
+                            }
+
+                            .color-svg-white-trans30 {
+                                opacity: .3;
+                                fill: #fff;
+                            }
+
+                            .color-svg-white-trans60 {
+                                opacity: .6;
+                                fill: #fff;
+                            }
+                        </style>
+                        <path id="N-triangle-bottomleft" class="color-svg-white-trans60" d="M0 93.9V350h257.8z" />
+                        <path id="N-letter-shape" class="color-svg-white" d="M105.5 0H0l352.4 350V0h-70.8v175z" />
+                        <path id="N-triangletopright" class="color-svg-white-trans30 " d="M281.6 175V0H105.5z" />
+                        <path id="M-triangle-left" class="color-svg-white-trans60" d="M418.3 0v350l176.2-175z" />
+                        <path id="M-triangle-bottom" class="color-svg-white-trans30 " d="M418.3 350h352.4L594.5 175z" />
+                        <path id="M-triangle-right" class="color-svg-white" d="M594.5 175l176.2 175V0z" />
+                        <path id="A-letter-shape" class="color-svg-white" d="M1083.5 350H1189L836.6 0v350h70.8V175z" />
+                        <path id="A-triangle-bottom" class="color-svg-white-trans60" d="M907.4 175v175h176.1z" />
+                    </svg>
                     <h1>Framework.v5</h1>
                     <p>A Work in Progress...</p>
                 </div>
             </section>
 
-            <section id="cards" class="full-size">
+            <section class="full-size">
                 <ul class="grid-of-cards">
-                    <li><a href="#" class="bg-blue"><span>Meta</span> Title of Card</a></li>
-                    <li><a href="#" class="bg-sky"><span>Meta</span> Title of Card</a></li>
-                    <li><a href="#" class="bg-green"><span>Meta</span> Title of Card</a></li>
-                    <li><a href="#" class="bg-lime"><span>Meta</span> Title of Card</a></li>
-                    <li><a href="#" class="bg-orange"><span>Meta</span> Title of Card</a></li>
-                    <li><a href="#" class="bg-peach"><span>Meta</span> Title of Card</a></li>
-                    <li><a href="#" class="bg-red"><span>Meta</span> Title of Card</a></li>
-                    <li><a href="#" class="bg-pink"><span>Meta</span> Title of Card</a></li>
-                    <li><a href="#" class="bg-purple"><span>Meta</span> Title of Card</a></li>
+                    <li><a href="#" class="bg-blue">Meta Info<span>Title of Card</span></a></li>
+                    <li><a href="#" class="bg-sky">Meta <span>Title of Card</span></a></li>
+                    <li><a href="#" class="bg-green">Meta <span>Title of Card</span></a></li>
+                    <li><a href="#" class="bg-lime">Meta <span>Title of Card</span></a></li>
+                    <li><a href="#" class="bg-orange">Meta <span>Title of Card</span></a></li>
+                    <li><a href="#" class="bg-peach">Meta <span>Title of Card</span></a></li>
+                    <li><a href="#" class="bg-red">Meta <span>Title of Card</span></a></li>
+                    <li><a href="#" class="bg-pink">Meta <span>Title of Card</span></a></li>
+                    <li><a href="#" class="bg-purple">Meta <span>Title of Card</span></a></li>
+                </ul>
             </section>
 
             <nav class="page-nav">
                 <ul>
-                    <li><a href="#top" class="scroll"><span>Page Title</span></a></li>
-                    <li><a href="#cards" class="scroll"><span>Grid of Cards</span></a></li>
                     <li><a href="#subsection1" class="scroll"><span>Subsection 1</span></a></li>
                     <li><a href="#subsection2" class="scroll"><span>Subsection 2</span></a></li>
                     <li><a href="#subsection3" class="scroll"><span>Subsection 3</span></a></li>
@@ -87,7 +129,7 @@
                         corrupti, dolor quaerat quam itaque. Sed quisquam numquam laborum at sit.</p>
                 </div>
             </section>
-            <section id="subsection2" class="darksection">
+            <section id="subsection2">
                 <div class="container">
                     <img src="img/placeholder-4x3.gif" alt="">
                     <h2>Sub Section 2 Heading</h2>
@@ -136,19 +178,64 @@
         </main>
 
 
-        <footer class="site-footer darksection">
-            <div class="social-nav">
-                <ul>
-                    <li><a href="#">Github</a></li>
-                    <li><a href="#">Codepen</a></li>
-                </ul>
+        <footer class="site-footer">
+            <div class="container row">
+                <div class="one-half">
+
+                    <h4>H4. Footer Heading</h4>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis atque incidunt autem sapiente
+                        dolores deserunt, perferendis quasi enim facilis, commodi aspernatur error quod dolor hic ut
+                        nesciunt minus velit asperiores magni! Quis non veniam amet exercitationem nihil esse dolor
+                        explicabo?
+                    </p>
+                    <a href="#" class="button reversed white">Footer Button</a>
+
+
+                </div>
+                <div class="one-half">
+
+
+                    <h4>H4. Footer Heading</h4>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis atque incidunt autem sapiente
+                        dolores deserunt, perferendis quasi enim facilis, commodi aspernatur error quod dolor hic ut
+                        nesciunt minus velit asperiores magni! Quis non veniam amet exercitationem nihil esse dolor
+                        explicabo?
+                    </p>
+
+                    <ul>
+                        <li><a href="#">List Item</a></li>
+                        <li><a href="#">List Item</a></li>
+                        <li><a href="#">List Item</a>
+                            <ul>
+                                <li><a href="#">Nested List Item</a></li>
+                                <li><a href="#">Nested List Item</a></li>
+                                <li><a href="#">Nested List Item</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">List Item</a></li>
+                        <li><a href="#">List Item</a></li>
+                        <li><a href="#">List Item</a></li>
+                        <li><a href="#">List Item</a></li>
+                    </ul>
+
+                </div>
             </div>
-            <nav class="bottom-nav">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about/index.html">About</a></li>
-                </ul>
-            </nav>
+            <div class="footer-navbar">
+                <div class="social-nav">
+                    <ul>
+                        <li><a href="#">Github</a></li>
+                        <li><a href="#">Codepen</a></li>
+                    </ul>
+                </div>
+                <nav class="bottom-nav">
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about/index.html">About</a></li>
+                    </ul>
+                </nav>
+            </div>
         </footer>
 
     </div>
