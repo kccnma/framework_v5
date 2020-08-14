@@ -1008,8 +1008,8 @@ section.not-full-height {
     padding: .5vw 1vw;
     font-size: .8em;
     font-size: .8vw;
-    font-size: max(.8vw, min(.8em, 1vw)); 
-    font-size: clamp(.8em, .8vw, 1vw);
+    font-size: max(.8vw, min(.7em, 1vw)); 
+    font-size: clamp(.7em, .8vw, 1vw);
 }
 .grid-of-cards.inline a span {
     font-size: 1.2em;
@@ -1036,11 +1036,11 @@ section.not-full-height {
         color: rgba(255,255,255,1); 
     }
 
-    .grid-of-cards.inline a span { 
+    /* .grid-of-cards.inline a span { 
         position: absolute;
         top: -9999px;
         left: -9999px;
-    }
+    } */
 
 }
 
@@ -1372,8 +1372,8 @@ section.not-full-height {
   font-family: Helvetica, Arial, sans-serif;
   font-size: 3em;
   font-size: 3vw;
-  font-size: clamp(2em, 3vw, 3em);
-  line-height: 4.5vw;
+  font-size: clamp(1em, 3vw, 3em);
+  line-height: 1.5;
   text-align: left;
   /* background: pink */
 }
@@ -1389,8 +1389,8 @@ section.not-full-height {
   overflow: hidden;
   display: inline-block;
   position: relative;
-  height: 4.5vw;
-  top: 1.5vw;
+  height: 1.5em;
+  top: .5em;
   text-align: left;
 }
 .rotating-text .rotating-items{
@@ -1398,7 +1398,7 @@ section.not-full-height {
   color: rgba(245,189,59,1);
   color: var(--color-brand-accent);
   position: relative;
-  white-space: nowrap;
+  /* white-space: nowrap; */
 
   /*animation*/
   animation:move 10s;
