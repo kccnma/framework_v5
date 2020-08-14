@@ -216,10 +216,9 @@ strong.sketchy:nth-child(3)::after { animation-delay: .6s; }
 
 .runninghead{
   position: relative;
-  top: 4em;
-  transform: rotate(-90deg) translate(-100%,-300%);
-  transform-origin: top left;
-  /* text-align: right; */
+  top: 11.8em;
+  left: -1.4em;
+  writing-mode: vertical-lr;
   display: inline-block;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -352,9 +351,9 @@ img {
 
 .site-logo svg {
     width: 100%;
-    stroke: rgba(255,255,255,1);
+    stroke: rgba(0,102,153,1);
     stroke-width: 3;
-    fill: rgba(255,255,255,0);
+    fill: rgba(0,102,153,0);
 }
 
 .site-logo :hover svg {
@@ -533,17 +532,23 @@ img {
     opacity: 1;
 }
 
-/* .site-header[data-headerstate="dark"] a {
-    color: rgba(255,255,255,.8);
-}
-
+/* SET HEADER ELEMENTS TO LIGHT OR DARK ON SCROLL OVER DARK SECTIONS */
 .site-header[data-headerstate="dark"] .site-nav .menu-button::after {
     color: rgba(255,255,255,.8);
+}
+.site-header[data-headerstate="light"] .site-nav .menu-button::after {
+    color: rgba(0,102,153,1);
+}
+.site-header[data-headerstate="light"] .site-nav .menu-button:hover::after {
+  color: rgba(255,255,255,1);
 }
 
 .site-header[data-headerstate="dark"] .site-logo svg {
     stroke: rgba(255,255,255,1);
-} */
+}
+.site-header[data-headerstate="light"] .site-logo svg {
+  stroke: rgba(0,102,153,1);
+}
 
 /* site header colors= overrides */
 /* .site-id a,
@@ -622,7 +627,7 @@ img {
     justify-content: space-between;
     align-items: center;
     color: rgba(255,255,255,.8);
-    /* min-height: 100vh; */
+    min-height: 100vh;
 }
 
 .site-footer .row {
@@ -787,7 +792,7 @@ section {
     width: 100%;
     display: grid;
     place-items: center;
-    background-color: rgba(0,102,153,.1);
+    background-color: rgba(0,102,153,.05);
     padding: 6em 0;
 }
 
@@ -846,9 +851,10 @@ section.not-full-height {
 
 .hero .runninghead {
   position: static;
-  transform: none;
+  writing-mode: lr-tb;
     color: rgba(255,255,255,.5);
-    border-color: rgba(255,255,255,.5);
+    padding-bottom: 1em;
+    border-bottom: 2px solid rgba(255,255,255,.5);
 }
 
 
@@ -945,7 +951,8 @@ section.not-full-height {
     list-style: none;
     width: 100%;
     margin: 0;
-    padding: 1.5vw;
+    /* padding: 1.5vw; */
+    padding: 60px;
     background: white;
     min-height: 100vh;
     display: grid;
@@ -1020,7 +1027,7 @@ section.not-full-height {
 
 .grid-of-cards.inline .selected a {
     margin-top: -1vw;
-    min-height: 10vw;
+    min-height: 11vw;
 }
 
 
@@ -1032,9 +1039,14 @@ section.not-full-height {
     }
 
     .grid-of-cards.inline a {
-        padding: 1vw;
+        padding: 5vw 1vw 1vw 1vw;
         color: rgba(255,255,255,1); 
     }
+
+    .grid-of-cards.inline .selected a {
+      min-height: 22vw;
+  }
+  
 
     /* .grid-of-cards.inline a span { 
         position: absolute;
@@ -1051,12 +1063,13 @@ section.not-full-height {
     text-decoration: none;
     text-transform: uppercase;
     font-family: sans-serif;
+    font-size: .8em;
     letter-spacing: .1em;
     display: inline-block;
     padding: 1em 2em;
     position: relative;
     overflow: hidden;
-    margin: 1em .5em 1em 0;
+    margin: .5em .5em .5em 0;
     border-radius: 5px;
   }
   
@@ -1366,6 +1379,160 @@ section.not-full-height {
 
 
 
+/* CHECKBOX LISTS WITH PROGRESS BARS */
+.checklist-progressbar {
+  /* background: #fff;
+  padding: 1em 2.5em;
+  border-radius: 1em;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  margin: 1em;
+  flex-grow: 1; */
+  padding: 1em 0;
+}
+
+.checklist-progressbar ul {
+  list-style: none;
+  margin: 0;  
+  padding: 0;
+ }
+
+ .checklist-progressbar ul ul {
+  padding-left: 1.5em;
+ }
+
+.checklist-progressbar li {
+  margin: .1em 0;
+}
+
+
+.checklist-progressbar input[type="checkbox"] {
+  cursor: pointer; }
+
+.checklist-progressbar .progressbar {
+  box-sizing: content-box;
+  position: relative;
+  border-radius: 3px;
+  background-color: rgba(0, 0, 0, 0.05);
+  height: 8px;
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+  margin-right: 2.8em; }
+
+.checklist-progressbar .progressbar .progressbar-inner {
+  display: block;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 100%;
+  background-color: #4AD991;
+  transition: all .3s linear; }
+
+.checklist-progressbar .progressbar .progressbar-value {
+  position: absolute;
+  top: -.25em;
+  right: -2.8em;
+  min-width: 2.8em;
+  width: 15%;
+  font-size: 1em;
+  line-height: 1;
+  text-align: right; }
+
+/* FULL CALENDAR */
+
+
+
+#calendar {
+
+  --fc-border-color: rgba(0,0,0,.1);
+  --fc-button-text-color: #fff;
+  --fc-button-bg-color: #6699cc;
+  --fc-button-border-color: #6699cc;
+
+  max-width: 800px;
+  min-height: 600px;
+  margin: 0 auto; 
+}
+
+#calendar h2 {
+  font-size: 1.5em;
+  font-size: 3vw;
+  font-size: clamp(1em, 2vw, 1.5em);
+  line-height: 1em;
+  margin-top: 0.2em; }
+
+#calendar thead th {
+  font-family: Helvetica, Arial, sans-serif;
+  font-weight: normal; }
+
+#calendar tbody {
+  font-family: Helvetica, Arial, sans-serif;
+  text-align: center; }
+
+#calendar .fc-button   {
+  font-family: Helvetica, Arial, sans-serif;
+  color: white;
+  background-color: #6699cc;
+  border: 1px solid #6699cc;
+}
+
+#calendar .fc-button :hover, 
+#calendar .fc-button:focus {
+  color: white;
+  border-color: #003366;
+  background-color: #003366;
+}
+
+#calendar .fc-event {
+  color: rgba(0,0,0,.6); }
+
+.darkblue #calendar .fc-event {
+  background: #1b3564;
+  border-color: #1b3564; }
+
+.blue #calendar .fc-event {
+  background: #336699;
+  border-color: #336699; }
+
+.lightblue #calendar .fc-event {
+  background: #0099cc;
+  border-color: #0099cc; }
+
+.tealgreen #calendar .fc-event {
+  background: #006D5B;
+  border-color: #006D5B; }
+
+.green #calendar .fc-event {
+  background: #669933;
+  border-color: #669933; }
+
+.yellow #calendar .fc-event {
+  background: #bcb83d;
+  border-color: #bcb83d; }
+
+.orange #calendar .fc-event {
+  background: #d3682b;
+  border-color: #d3682b; }
+
+.red #calendar .fc-event {
+  background: #d33a2b;
+  border-color: #d33a2b; }
+
+.maroon #calendar .fc-event {
+  background: #993333;
+  border-color: #993333; }
+
+.purple #calendar .fc-event {
+  background: #8753a1;
+  border-color: #8753a1; }
+
+#calendar .fc-event.kcc-cal {
+  background: #a6a6a6;
+  border-color: #a6a6a6; }
+
+
+
 /* ROTATING TEXT ANIMATION */
 .rotating-text {
   margin: -.5em 0 .5em 0;
@@ -1425,7 +1592,7 @@ section.not-full-height {
 
 /* POPOUT TEXT ANIMATION */
 .popout-text {
-  font-family: monospace;
+  font-family: "Courier New", Courier, monospace;
   font-weight: 900;
   line-height: .85;
   font-size: 10vw;
@@ -1545,54 +1712,61 @@ section.not-full-height {
   }
 }
 
-.revealer.active *:nth-child(1),
+.fadeandscaleIn[data-sectionstate="active"] *:nth-child(1),
 .fadeandscaleIn *:nth-child(1) {
   animation-delay: 0s;
 }
-.revealer.active *:nth-child(2),
+.fadeandscaleIn[data-sectionstate="active"] *:nth-child(2),
 .fadeandscaleIn *:nth-child(2) {
   animation-delay: 0.15s;
 }
-.revealer.active *:nth-child(3),
+.fadeandscaleIn[data-sectionstate="active"] *:nth-child(3),
 .fadeandscaleIn *:nth-child(3) {
   animation-delay: 0.3s;
 }
-.revealer.active *:nth-child(4),
+.fadeandscaleIn[data-sectionstate="active"] *:nth-child(4),
 .fadeandscaleIn *:nth-child(4) {
   animation-delay: 0.45s;
 }
-.revealer.active *:nth-child(5),
+.fadeandscaleIn[data-sectionstate="active"] *:nth-child(5),
 .fadeandscaleIn *:nth-child(5) {
   animation-delay: 0.6s;
 }
-.revealer.active *:nth-child(6),
+.fadeandscaleIn[data-sectionstate="active"] *:nth-child(6),
 .fadeandscaleIn *:nth-child(6) {
   animation-delay: 0.75s;
 }
-.revealer.active *:nth-child(7),
+.fadeandscaleIn[data-sectionstate="active"] *:nth-child(7),
 .fadeandscaleIn *:nth-child(7) {
   animation-delay: 0.9s;
 }
-.revealer.active *:nth-child(8),
+.fadeandscaleIn[data-sectionstate="active"] *:nth-child(8),
 .fadeandscaleIn *:nth-child(8) {
   animation-delay: 1.05s;
 }
-.revealer.active *:nth-child(9),
+.fadeandscaleIn[data-sectionstate="active"] *:nth-child(9),
 .fadeandscaleIn *:nth-child(9) {
   animation-delay: 1.2s;
 }
-.revealer.active *:nth-child(10),
+.fadeandscaleIn[data-sectionstate="active"] *:nth-child(10),
 .fadeandscaleIn *:nth-child(10) {
   animation-delay: 1.35s;
 }
 
-.revealer * {
-  opacity: 0;
-}
-
-.swiper-slide-active .vertbox *,
-.revealer.active *,
+/* .swiper-slide-active .vertbox *,
+.fadeandscaleIn[data-sectionstate="active"]*,
 .fadeandscaleIn * {
   animation: fadeandscaleIn 0.6s ease-out forwards;
   opacity: 0;
+} */
+
+.fadeandscaleIn *,
+.fadeandscaleIn[data-sectionstate="inactive"] * {
+  opacity: 0;
 }
+
+.fadeandscaleIn[data-sectionstate="active"] * {
+  animation: fadeandscaleIn 0.4s ease-out forwards;
+  opacity: 0;
+}
+

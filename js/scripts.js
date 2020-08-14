@@ -15,7 +15,7 @@ window.addEventListener('DOMContentLoaded', () => {
     };
 
 
-    // SECTION AND PAGE NAV ACTIVE STATE WITH INTERSECTION OBSERVER
+    // SET PAGE NAV ACTIVE STATE WITH INTERSECTION OBSERVER
     const io_options = {
         // root: document.body,
         rootMargin: '-50% 0px -50% 0px',
@@ -27,44 +27,14 @@ window.addEventListener('DOMContentLoaded', () => {
             const pagenav = document.querySelector('.page-nav');
             const siteheader = document.querySelector('.site-header');
             if (entry.isIntersecting) {
-                entry.target.setAttribute('data-sectionstate', 'active');
                 if (pagenav) {
                     document.querySelector(`.page-nav a[href="#${id}"]`).parentElement.setAttribute('data-pagenavstate', 'active');
                 }
-                // if (entry.target.classList.contains('darksection')) {
-                //     siteheader.setAttribute('data-headerstate', 'dark');
-                // }
             } else {
-                entry.target.setAttribute('data-sectionstate', 'inactive');
-                // siteheader.setAttribute('data-headerstate', 'light');
                 if (pagenav) {
                     document.querySelector(`.page-nav a[href="#${id}"]`).parentElement.setAttribute('data-pagenavstate', 'inactive');
                 }
             }
-            // console.log(entry.intersectionRatio);
-            // if (entry.intersectionRatio > 0) {
-            //     if (entry.target.classList.contains('darksection')) {
-            //         siteheader.setAttribute('data-headerstate', 'dark');
-            //     } else {
-            //         siteheader.setAttribute('data-headerstate', 'light');
-            //     }
-            // }
-
-
-            // CHECK IF HERO IS ACTIVE
-
-            // const myhero = document.querySelector('.hero');
-            // console.log(myhero.intersectionRatio);
-            // if (myhero.intersectionRatio > 0) {
-            //     mysiteheader.setAttribute('data-headerstate', 'dark');
-            // } else {
-            //     mysiteheader.setAttribute('data-headerstate', 'light');
-            // }
-            // if (myhero.dataset.sectionstate === 'active') {
-            //     mysiteheader.setAttribute('data-headerstate', 'dark');
-            // } else {
-            //     mysiteheader.setAttribute('data-headerstate', 'light');
-            // }
 
         });
     }, io_options);
@@ -73,29 +43,47 @@ window.addEventListener('DOMContentLoaded', () => {
     });
 
 
-    // CHECK IF HERO IS ACTIVE, IF SO... SET HEADER TO DARK
-    // const mydarksections = document.querySelectorAll('.darksections');
+    // CHANGE HEADER STATE to LIGHT OR DARK WITH INTERSECTION OBSERVER
+    const io_options2 = {
+        // root: document.body,
+        rootMargin: '0px 0px -100% 0px',
+        threshold: 0
+    };
+    const observer2 = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            const siteheader = document.querySelector('.site-header');
+            if (entry.isIntersecting) {
+                if (entry.target.classList.contains('darksection')) {
+                    siteheader.setAttribute('data-headerstate', 'dark');
+                } else {
+                    siteheader.setAttribute('data-headerstate', 'light');
+                }
+            }
+        });
+    }, io_options2);
+    document.querySelectorAll('section, header, footer').forEach((section) => {
+        observer2.observe(section);
+    });
 
-    // const myhero = document.querySelector('.hero');
-    // const mysiteheader = document.querySelector('.site-header');
-    // const heroobserver = new IntersectionObserver((entries, heroobserver) => {
-    //     entries.forEach(entry => {
-    //         if (entry.intersectionRatio > 0) {
-    //             mysiteheader.setAttribute('data-headerstate', 'dark');
-    //         }
-    //         else {
-    //             mysiteheader.setAttribute('data-headerstate', 'light');
-    //         }
-    //     });
-    // }, { threshold: 0 });
-    // heroobserver.observe(myhero);
-
-    // document.querySelectorAll('.darksection').forEach((section) => {
-    //     heroobserver.observe(section);
-    // });
-
-
-
+    // CHANGE ACTIVE STATE FOR ALL SECTIONS WITH INTERSECTION OBSERVER
+    const io_options3 = {
+        // root: document.body,
+        rootMargin: '-25% 0px -25% 0px',
+        threshold: 0
+    };
+    const observer3 = new IntersectionObserver(entries => {
+        entries.forEach(entry => {
+            const siteheader = document.querySelector('.site-header');
+            if (entry.isIntersecting) {
+                entry.target.setAttribute('data-sectionstate', 'active');
+            } else {
+                entry.target.setAttribute('data-sectionstate', 'inactive');
+            }
+        });
+    }, io_options3);
+    document.querySelectorAll('section, header, footer').forEach((section) => {
+        observer3.observe(section);
+    });
 
 
 
