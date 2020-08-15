@@ -538,10 +538,11 @@ img {
 }
 
 /* SET HEADER ELEMENTS TO LIGHT OR DARK ON SCROLL OVER DARK SECTIONS */
+.site-header[data-headerstate="light"] .site-nav[data-navstate="open"] .menu-button::after,
 .site-header[data-headerstate="dark"] .site-nav .menu-button::after {
     color: rgba(255,255,255,.8);
 }
-.site-header[data-headerstate="light"] .site-nav[data-navstate="open"] .menu-button::after,
+
 .site-header[data-headerstate="light"] .site-nav .menu-button::after {
     color: rgba(0,102,153,1);
 }
@@ -1717,43 +1718,52 @@ section.not-full-height {
     opacity: 1;
   }
 }
-
+.fadeandscaleIn-noscroll *:nth-child(1),
 .fadeandscaleIn[data-sectionstate="active"] *:nth-child(1),
 .fadeandscaleIn *:nth-child(1) {
   animation-delay: 0s;
 }
+.fadeandscaleIn-noscroll *:nth-child(2),
 .fadeandscaleIn[data-sectionstate="active"] *:nth-child(2),
 .fadeandscaleIn *:nth-child(2) {
   animation-delay: 0.15s;
 }
+.fadeandscaleIn-noscroll *:nth-child(3),
 .fadeandscaleIn[data-sectionstate="active"] *:nth-child(3),
 .fadeandscaleIn *:nth-child(3) {
   animation-delay: 0.3s;
 }
+.fadeandscaleIn-noscroll *:nth-child(4),
 .fadeandscaleIn[data-sectionstate="active"] *:nth-child(4),
 .fadeandscaleIn *:nth-child(4) {
   animation-delay: 0.45s;
 }
+.fadeandscaleIn-noscroll *:nth-child(5),
 .fadeandscaleIn[data-sectionstate="active"] *:nth-child(5),
 .fadeandscaleIn *:nth-child(5) {
   animation-delay: 0.6s;
 }
+.fadeandscaleIn-noscroll *:nth-child(6),
 .fadeandscaleIn[data-sectionstate="active"] *:nth-child(6),
 .fadeandscaleIn *:nth-child(6) {
   animation-delay: 0.75s;
 }
+.fadeandscaleIn-noscroll *:nth-child(7),
 .fadeandscaleIn[data-sectionstate="active"] *:nth-child(7),
 .fadeandscaleIn *:nth-child(7) {
   animation-delay: 0.9s;
 }
+.fadeandscaleIn-noscroll *:nth-child(8),
 .fadeandscaleIn[data-sectionstate="active"] *:nth-child(8),
 .fadeandscaleIn *:nth-child(8) {
   animation-delay: 1.05s;
 }
+.fadeandscaleIn-noscroll *:nth-child(9),
 .fadeandscaleIn[data-sectionstate="active"] *:nth-child(9),
 .fadeandscaleIn *:nth-child(9) {
   animation-delay: 1.2s;
 }
+.fadeandscaleIn-noscroll *:nth-child(10),
 .fadeandscaleIn[data-sectionstate="active"] *:nth-child(10),
 .fadeandscaleIn *:nth-child(10) {
   animation-delay: 1.35s;
@@ -1766,13 +1776,14 @@ section.not-full-height {
   opacity: 0;
 } */
 
-.fadeandscaleIn *,
-.fadeandscaleIn[data-sectionstate="inactive"] * {
+.fadeandscaleIn * {
   opacity: 0;
 }
 
-.fadeandscaleIn[data-sectionstate="active"] * {
+.fadeandscaleIn[data-sectionstate="active"] *,
+.fadeandscaleIn-noscroll * {
   animation: fadeandscaleIn 0.4s ease-out forwards;
   opacity: 0;
 }
+
 

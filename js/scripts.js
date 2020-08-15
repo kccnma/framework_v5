@@ -68,7 +68,7 @@ window.addEventListener('DOMContentLoaded', () => {
     // CHANGE ACTIVE STATE FOR ALL SECTIONS WITH INTERSECTION OBSERVER
     const io_options3 = {
         // root: document.body,
-        rootMargin: '-25% 0px -25% 0px',
+        rootMargin: '0px 0px -25% 0px',
         threshold: 0
     };
     const observer3 = new IntersectionObserver(entries => {
