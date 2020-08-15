@@ -215,10 +215,10 @@ strong.sketchy:nth-child(3)::after { animation-delay: .6s; }
 }
 
 .runninghead{
-  position: relative;
+  /* position: relative;
   top: 11.8em;
   left: -1.4em;
-  writing-mode: vertical-lr;
+  writing-mode: vertical-lr; */
   display: inline-block;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -818,7 +818,7 @@ section.not-full-height {
 }
 
 .container {
-    margin: 0 60px;
+    margin: 0 55px;
     max-width: 1000px;
 }
 
@@ -859,9 +859,10 @@ section.not-full-height {
 .hero .runninghead {
   position: static;
   writing-mode: lr-tb;
-    color: rgba(255,255,255,.5);
-    padding-bottom: 1em;
-    border-bottom: 2px solid rgba(255,255,255,.5);
+  color: rgba(255,255,255,.5);
+  padding-bottom: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid rgba(255,255,255,.5);
 }
 
 
@@ -958,8 +959,8 @@ section.not-full-height {
     list-style: none;
     width: 100%;
     margin: 0;
-    /* padding: 1.5vw; */
-    padding: 60px;
+    padding: 1.5vw;
+    /* padding: 60px; */
     background: white;
     min-height: 100vh;
     display: grid;
