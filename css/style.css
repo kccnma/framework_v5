@@ -579,7 +579,7 @@ img {
     content: "";
     position: absolute;
     top: 5px;
-    right: 13px;
+    right: 8px;
     width: 40px;
     height: 40px;
     border-radius: 100%;
@@ -592,7 +592,7 @@ img {
     visibility: visible;
     position: absolute;
     top: 5px;
-    right: 13px;
+    right: 8px;
     width: 40px;
     height: 40px;
     /* content: "\2636"; */
@@ -1000,6 +1000,8 @@ section.not-full-height {
 }
 
 /* PER PAGE COLOR OVERRIDES */
+
+
 #page-blue .hero,
 #page-blue .site-footer,
 #page-blue .dropcaps:first-letter {
@@ -1025,6 +1027,7 @@ section.not-full-height {
   border-color: #68ACD9;
   border-color: var(--color-blue);
 }
+
 
 #page-orange .hero,
 #page-orange .site-footer,
