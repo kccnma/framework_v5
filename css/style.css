@@ -163,7 +163,7 @@ h3 {
   font-size: 1.5vw;
   font-size: clamp(1.3em, 1.5vw, 1.5em);
   line-height: 2.6ex;
-  margin: 1.3 0;
+  margin: 1.3ex 0;
 }
 
 h4 {
@@ -223,7 +223,7 @@ strong.sketchy::after {
   background-position: center;
 }
 strong.sketchy::after { animation-delay: 1s; }
-strong.sketchy:nth-child(0)::after { animation-delay: 0; }
+strong.sketchy:nth-child(0)::after { animation-delay: 0s; }
 strong.sketchy:nth-child(1)::after { animation-delay: .2s; }
 strong.sketchy:nth-child(2)::after { animation-delay: .4s; }
 strong.sketchy:nth-child(3)::after { animation-delay: .6s; }
@@ -951,7 +951,7 @@ section:nth-child(even) {
 
 section.full-size {
     padding: 0;
-    background-color: none;
+    background-color: transparent;
 }
 
 section.not-full-height {
@@ -1007,7 +1007,6 @@ section.not-full-height {
 
 .hero .runninghead {
   position: static;
-  writing-mode: lr-tb;
   color: rgba(255,255,255,.5);
   padding-bottom: 1em;
   margin-bottom: 1em;
@@ -1315,7 +1314,7 @@ section.not-full-height {
   animation-name: rt-move-nine;
   animation-duration: 10s;
   animation-iteration-count:infinite;
-  animation-delay:0;
+  animation-delay:0s;
 }
 .rotating-text .rotating-items.move-three {
     animation-name: rt-move-three;
