@@ -43,11 +43,11 @@
                     <li class="sub-nav">
                         <ul>
                             <li><a href="../subpageblue/index.html" class="bg-blue">Blue
-                                    <span>Sub Page</span></a></li>
-                            <li><a href="#" class="bg-sky">Sub <span>Page</span></a></li>
+                                    <span>Page</span></a></li>
+                            <li><a href="../subpagesky/index.html" class="bg-sky">Sub <span>Page</span></a></li>
                             <li><a href="#" class="bg-green">Sub <span>Page</span></a></li>
                             <li><a href="#" class="bg-lime">Sub <span>Page</span></a></li>
-                            <li><a href="../subpageorange/index.html" class="bg-orange">Orange <span>Sub Page</span></a>
+                            <li><a href="../subpageorange/index.html" class="bg-orange">Orange <span>Page</span></a>
                             </li>
                             <li><a href="#" class="bg-peach">Sub <span>Page</span></a></li>
                             <li><a href="#" class="bg-red">Sub <span>Page</span></a></li>
@@ -88,8 +88,8 @@
             <section class="full-size not-full-height ">
                 <ul class="grid-of-cards inline fadeandscaleIn-noscroll">
                     <li><a href="../subpageblue/index.html" class="bg-blue">Blue
-                            <span>Sub Page</span></a></li>
-                    <li><a href="#" class="bg-sky">Meta <span>Title of Card</span></a></li>
+                            <span>Page</span></a></li>
+                    <li><a href="../subpagesky/index.html" class="bg-sky">Meta <span>Title of Card</span></a></li>
                     <li><a href="#" class="bg-green">Meta <span>Title of Card</span></a></li>
                     <li><a href="#" class="bg-lime">Meta <span>Title of Card</span></a></li>
                     <li class="selected"><a href="../subpageorange/index.html" class="bg-orange">Orange <span>Sub
@@ -334,9 +334,9 @@
             </section>
 
             <section id="links">
-                <div class="container">
+                <div class="container full-width">
                     <h2 class="sectionhead">Links</h2>
-                    <ul>
+                    <ul class="linklist">
                         <li><a href="#">Lorem Ipsum</a></li>
                         <li><a href="#">Et Dolorem</a></li>
                         <li><a href="#">Sit Amet</a></li>
@@ -509,9 +509,8 @@
             var calendarEl = document.getElementById('calendar');
             var calendar = new FullCalendar.Calendar(calendarEl, {
                 headerToolbar: {
-                    left: 'prev,next today',
-                    center: 'title',
-                    right: 'dayGridMonth,listYear'
+                    left: 'title',
+                    right: 'today prev,next'
                 },
 
                 displayEventTime: false, // don't show the time column in list view

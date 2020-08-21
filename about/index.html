@@ -43,7 +43,7 @@
                     <li class="sub-nav">
                         <ul>
                             <li><a href="../subpageblue/index.html" class="bg-blue">Sub <span>Page</span></a></li>
-                            <li><a href="#" class="bg-sky">Sub <span>Page</span></a></li>
+                            <li><a href="../subpagesky/index.html" class="bg-sky">Sub <span>Page</span></a></li>
                             <li><a href="#" class="bg-green">Sub <span>Page</span></a></li>
                             <li><a href="#" class="bg-lime">Sub <span>Page</span></a></li>
                             <li><a href="../subpageorange/index.html" class="bg-orange">Sub <span>Page</span></a></li>
@@ -85,9 +85,9 @@
 
 
                 <div class="video-bg-wrapper">
-                    <iframe
-                        src="https://www.youtube.com/embed/aavIc4zoCaQ?version=3&loop=1&playlist=aavIc4zoCaQ&rel=0&autoplay=1&mute=1&start=78&end=95&controls=0&fs=0&vq=small"
-                        frameborder="0" allowfullscreen></iframe>
+                    <video autoplay loop muted>
+                        <source src="../vid/nma-bg-short-dark.mp4" type="video/mp4">
+                    </video>
                 </div>
 
 
@@ -605,11 +605,11 @@
 
             <section class="full-size not-full-height ">
                 <ul class="grid-of-cards inline fadeandscaleIn-noscroll">
-                    <li><a href="../subpageblue/index.html" class="bg-blue">Blue <span>Sub Page</span></a></li>
-                    <li><a href="#" class="bg-sky">Meta <span>Title of Card</span></a></li>
+                    <li><a href="../subpageblue/index.html" class="bg-blue">Blue <span>Page</span></a></li>
+                    <li><a href="../subpagesky/index.html" class="bg-sky">Meta <span>Title of Card</span></a></li>
                     <li><a href="#" class="bg-green">Meta <span>Title of Card</span></a></li>
                     <li><a href="#" class="bg-lime">Meta <span>Title of Card</span></a></li>
-                    <li><a href="../subpageorange/index.html" class="bg-orange">Orange <span>Sub Page</span></a></li>
+                    <li><a href="../subpageorange/index.html" class="bg-orange">Orange <span>Page</span></a></li>
                     <li><a href="#" class="bg-peach">Meta <span>Title of Card</span></a></li>
                     <li><a href="#" class="bg-red">Meta <span>Title of Card</span></a></li>
                     <li><a href="#" class="bg-pink">Meta <span>Title of Card</span></a></li>
@@ -764,9 +764,8 @@
             var calendarEl = document.getElementById('calendar');
             var calendar = new FullCalendar.Calendar(calendarEl, {
                 headerToolbar: {
-                    left: 'prev,next today',
-                    center: 'title',
-                    right: 'dayGridMonth,listYear'
+                    left: 'title',
+                    right: 'today prev,next'
                 },
 
                 displayEventTime: false, // don't show the time column in list view
