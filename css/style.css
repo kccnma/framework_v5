@@ -602,7 +602,7 @@ video {
 /* SITE-NAV PRIMARY NAV */
 .site-nav .primary-nav {
   position: fixed;
-  top: 40%;
+  top: -100%;
   left: 15%;
   width: 20%;
   transform: translateY(-50%);
@@ -635,7 +635,7 @@ video {
 /* SITE-NAV SECONDARY NAV */
 .site-nav .secondary-nav {
   position: fixed;
-  top: 40%;
+  top: -100%;
   left: 35%;
   width: 50%;
   transform: translateY(-50%);
