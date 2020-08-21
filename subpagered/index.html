@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Site Name | About</title>
+    <title>Site Name | Red</title>
 
     <meta name="description"
         content="A minimalistic HTML + CSS + JS base front-end framework for simple web site projects." />
@@ -19,7 +19,7 @@
 
 </head>
 
-<body id="page-about" class="page-sub">
+<body id="page-red" class="page-sub show-nav">
     <div class="site-wrapper">
 
         <header class="site-header darksection">
@@ -60,59 +60,60 @@
         </header>
 
         <main id="top" class="site-main layout-centered">
-            <section class="hero darksection video-bg">
+            <section class="hero darksection">
 
-                <div class="video-bg-topcontent">
-                    <div class="runninghead">About</div>
-                    <h1>What is This?
-                    </h1>
+                <div class="container">
+                    <div class="runninghead">Sub Page</div>
+                    <h1>Red Sub Page</h1>
                     <div class="rotating-text">
                         <div class="stationary-text">
-                            <p>This is</p>
+                            <p>Rotaing Text</p>
                         </div>
                         <div class="rotating-item-wrapper">
                             <div class="rotating-items move-three">
-                                HTML<br />
-                                CSS<br />
-                                JavaScript
+                                of Different Messages<br />
+                                to Communicate<br />
+                                Different Things
                             </div>
                         </div>
                     </div>
 
-                    <p>This is a work-in-progress, minimalistic HTML + CSS + JS base front-end framework for simple web
-                        site projects.</p>
-                    <a href="#typespecimen" class="scroll button reversed white">Is This Your Type?</a>
-
-
+                    <p>This is a color-coded sub page, designed to be a part of a set of sub pages each with their own
+                        associated color. Each sub page has a left-hand side subnav to navigate up and down the page to
+                        different sub sections.</p>
+                    <a href="#intro" class="scroll button reversed white">Go to Intro Section</a>
                 </div>
-
-
-                <div class="video-bg-wrapper">
-                    <video autoplay loop muted>
-                        <source src="../vid/nma-bg-short-dark.mp4" type="video/mp4">
-                    </video>
-                </div>
-
 
             </section>
-
+            <section class="full-size not-full-height ">
+                <ul class="grid-of-cards inline fadeandscaleIn-noscroll">
+                    <li><a href="../subpageblue/index.html" class="bg-blue">Sub<span> Page</span></a>
+                    </li>
+                    <li><a href="../subpagesky/index.html" class="bg-sky">Sub<span> Page</span></a></li>
+                    <li><a href="../subpagegreen/index.html" class="bg-green">Sub<span> Page</span></a></li>
+                    <li><a href="../subpagelime/index.html" class="bg-lime">Sub<span> Page</span></a></li>
+                    <li><a href="../subpageorange/index.html" class="bg-orange">Sub<span> Page</span></a>
+                    </li>
+                    <li><a href="../subpagepeach/index.html" class="bg-peach">Sub<span> Page</span></a></li>
+                    <li class="selected"><a href="../subpagered/index.html" class="bg-red">Sub<span> Page</span></a>
+                    </li>
+                    <li><a href="../subpagepink/index.html" class="bg-pink">Sub<span> Page</span></a></li>
+                    <li><a href="../subpagepurple/index.html" class="bg-purple">Sub<span> Page</span></a></li>
+                </ul>
+            </section>
 
 
             <nav class="page-nav">
                 <ul>
-                    <li><a href="#typespecimen" class="scroll"><span>Type Specimen</span></a></li>
-                    <li><a href="#typographicscale" class="scroll"><span>Typographic Scale</span></a></li>
-                    <li><a href="#buttons" class="scroll"><span>Buttons</span></a></li>
-                    <li><a href="#gridsystem" class="scroll"><span>Grid System</span></a></li>
-                    <li><a href="#charts" class="scroll"><span>Charts & Visuals</span></a></li>
+                    <li><a href="#intro" class="scroll"><span>Intro</span></a></li>
+                    <li><a href="#overview" class="scroll"><span>Overview</span></a></li>
                     <li><a href="#schedule" class="scroll"><span>Calendar</span></a></li>
-                    <li><a href="#links" class="scroll"><span>Link List</span></a></li>
-                    <li><a href="#accordians" class="scroll"><span>Accordians</span></a></li>
-                    <li><a href="#funstuff" class="scroll"><span>Fun Stuff</span></a></li>
+                    <li><a href="#checkboxes" class="scroll"><span>Checkboxes</span></a></li>
+                    <li><a href="#links" class="scroll"><span>Links</span></a></li>
                 </ul>
             </nav>
 
-            <section id="typespecimen">
+            <section id="intro">
                 <div class="container fadeandscaleIn">
 
                     <div class="runninghead">Running Head</div>
@@ -122,8 +123,7 @@
                     <h3 class="credit">
                         <span>Credit:</span> Value</h3>
 
-                    <p class="dropcaps">This is a type specimen. Lorem ipsum dolor sit amet consectetur adipisicing
-                        elit. Quaerat ratione
+                    <p class="dropcaps">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat ratione
                         possimus vero libero
                         nobis unde, enim eum ab maxime expedita neque facere, repudiandae, earum quasi sequi dolor cum
                         fugit. Id optio sapiente perspiciatis unde illum natus molestiae sit dolorem quae, suscipit
@@ -136,174 +136,20 @@
                         deleniti et laboriosam adipisci rem cupiditate esse voluptatum incidunt obcaecati
                         exercitationem, quae, distinctio facere.</p>
 
-                    <a href="#typographicscale" class="button scroll">Set(up) Some Type</a>
-                    <a href="#buttons" class="button scroll">Press My Buttons</a>
+                    <a href="#overview" class="button scroll">Get an Overview</a>
+                    <a href="#schedule" class="button scroll">Go to the Calendar</a>
 
 
                 </div>
             </section>
 
-            <section id="typographicscale">
-                <div class="container fadeandscaleIn">
-                    <h2 class="sectionhead">Typographic Scale</h2>
 
-                    <h1>H1. This is a Heading 1. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum,
-                        voluptas?</h1>
 
-                    <h2>H2. This is a Heading 2. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum,
-                        voluptas?</h2>
-
-                    <h3>H3. This is a Heading 3. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum,
-                        voluptas?</h3>
-
-                    <h4>H4. This is a Heading 4. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum,
-                        voluptas?</h4>
-
-                    <h5>H5. This is a Heading 5. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum,
-                        voluptas?</h5>
-
-                    <h6>H6. This is a Heading 6. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Rerum,
-                        voluptas?</h6>
-
-                    <p>This is a paragraph. Lorem ipsum et dolorem. This is <strong>something bold</strong>. This is
-                        <em>something italic</em>.
-                        This is an inline <a href="#">link to something</a>.
-                        Lorem ipsum dolor sit amet,
-                        consectetur adipisicing elit. Minima autem suscipit sint commodi
-                        nihil? Aliquid voluptate <span class="hilite">similique id? Error culpa blanditiis</span> porro
-                        ab ipsam, deserunt maiores,
-                        veniam repudiandae. This is <strong class="sketchy">underlined with a brush.</strong> quibusdam
-                        nemo
-                        atque beatae repellat soluta natus dolor commodi nulla autem
-                        delectus ea ullam unde iste. Aliquid est modi ducimus fugit iusto.</p>
-
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima autem suscipit sint commodi
-                        nihil? Aliquid voluptate similique id? Error culpa blanditiis porro ab ipsam, deserunt maiores,
-                        veniam repudiandae quibusdam nemo atque beatae repellat soluta natus dolor commodi nulla autem
-                        delectus ea ullam unde iste. Aliquid est modi ducimus fugit iusto.</p>
-
-                    <ul>
-                        <li>This is an Unordered List Item</li>
-                        <li>This is an Unordered List Item</li>
-                        <li>This is an Unordered List Item</li>
-                    </ul>
-
-                    <ol>
-                        <li>This is an Ordered List Item</li>
-                        <li>This is an Ordered List Item</li>
-                        <li>This is an Ordered List Item</li>
-                    </ol>
-
-                    <p>This is a <a href="#">link</a>.</p>
-
-                </div>
-            </section>
-
-            <section id="buttons">
-                <div class="container full-width">
-                    <h2 class="sectionhead">Buttons</h2>
-                    <a href="#" class="button">Default Button</a>
-                    <a href="#" class="button reversed">Reversed Button</a>
-
-                    <div style="background-color: black; padding: 1em; margin: 1em 0;">
-                        <a href="#" class="button reversed white">Reversed Button White</a>
-
-                    </div>
-
-                    <a href="#" class="button btn-wipe">Wipe</a>
-                    <a href="#" class="button btn-wipe reversed">Reversed Wipe</a>
-
-                    <a href="#" class="button btn-lift">Lift</a>
-                </div>
-            </section>
-
-            <section id="gridsystem" class="demo">
-
-                <div class="container full-width">
-                    <h2 class="sectionhead">Grid System</h2>
-
-                    <p>Simple, human-friendly semantic classnames:</p>
-
-                    <div class="row">
-                        <div class="column">.column</div>
-                    </div>
-
-                    <div class="row">
-                        <div class="one-half column">.one-half</div>
-                        <div class="one-half column">.one-half</div>
-                    </div>
-
-                    <div class="row">
-                        <div class="one-third column">.one-third</div>
-                        <div class="one-third column">.one-third</div>
-                        <div class="one-third column">.one-third</div>
-                    </div>
-
-                    <div class="row">
-                        <div class="one-third column">.one-third</div>
-                        <div class="two-thirds column">.two-thirds</div>
-                    </div>
-
-                    <div class="row">
-                        <div class="one-fourth column">.one-fourth</div>
-                        <div class="one-fourth column">.one-fourth</div>
-                        <div class="one-fourth column">.one-fourth</div>
-                        <div class="one-fourth column">.one-fourth</div>
-                    </div>
-
-                    <div class="row">
-                        <div class="one-fourth column">.one-fourth</div>
-                        <div class="three-fourths column">.three-fourths</div>
-                    </div>
-
-                    <p>Rows work with or w/o .column children</p>
-
-                    <div class="row">
-                        <div><strike>.column</strike></div>
-                    </div>
-
-                    <div class="row">
-                        <div class="one-half">.one-half <strike>.column</strike></div>
-                        <div class="one-half">.one-half <strike>.column</strike></div>
-                    </div>
-
-                    <p>Center children w/ .centered (works with or w/o width or column classes)</p>
-
-                    <div class="row centered">
-                        <div><strike>.column</strike></div>
-                    </div>
-
-                    <div class="row centered">
-                        <div class="one-half">.one-half</div>
-                    </div>
-
-                    <div class="row centered">
-                        <div class="two-thirds">.two-thirds</div>
-                    </div>
-
-                    <p>Be a Push Over.</p>
-
-                    <div class="row">
-                        <div class="three-fourths push-one-fourth">.push-one-fourth</div>
-                    </div>
-
-                    <div class="row">
-                        <div class="two-thirds push-one-third">.push-one-third</div>
-                    </div>
-
-                    <div class="row">
-                        <div class="one-half push-one-half">.push-one-half</div>
-                    </div>
-
-                </div>
-
-            </section>
-
-            <section id="charts">
+            <section id="overview">
                 <div class="container full-width fadeandscaleIn">
 
 
-                    <h2 class="sectionhead">Colored Progress Bars</h2>
+                    <h2 class="sectionhead">Progress Bars</h2>
 
                     <div class="item-progressbar">
 
@@ -367,25 +213,25 @@
                     </div>
 
 
-                    <h2 class="sectionhead">Colored Pie Charts</h2>
+                    <h2 class="sectionhead">Pie Charts</h2>
 
                     <div class="row split charts">
-                        <div class="one-fourth">
+                        <div class="one-fourth column">
                             <div class="chart blue" data-percent="20">20%</div>
                             <h4>Chart Title</h4>
                             <p>Chart Desription</p>
                         </div>
-                        <div class="one-fourth">
+                        <div class="one-fourth column">
                             <div class="chart green" data-percent="40">40%</div>
                             <h4>Chart Title</h4>
                             <p>Chart Desription</p>
                         </div>
-                        <div class="one-fourth">
+                        <div class="one-fourth column">
                             <div class="chart orange" data-percent="20">20%</div>
                             <h4>Chart Title</h4>
                             <p>Chart Desription</p>
                         </div>
-                        <div class="one-fourth">
+                        <div class="one-fourth column">
                             <div class="chart red" data-percent="20">20%</div>
                             <h4>Chart Title</h4>
                             <p>Chart Desription</p>
@@ -393,73 +239,14 @@
                     </div>
 
 
-                    <h2 class="sectionhead">Checkbox Lists with Progress Bar Indicators</h2>
-
-                    <div class="checklist-progressbar">
-                        <h3>Set A</h3>
-                        <div class="progressbar">
-                            <div class="progressbar-inner"></div>
-                            <div class="progressbar-value"></div>
-                        </div>
-                        <ul>
-                            <li>
-                                <input type="checkbox" id="progchecker-page-about-a1">
-                                <label>Set A Checkbox 01</label>
-                            </li>
-                            <li>
-                                <input type="checkbox" id="progchecker-page-about-a2">
-                                <label>Set A Checkbox 02</label>
-                            </li>
-                            <li>
-                                <input type="checkbox" id="progchecker-page-about-a3">
-                                <label>Set A Checkbox 03</label>
-
-                                <ul>
-                                    <li>
-                                        <input type="checkbox" id="progchecker-page-about-a3-sub1">
-                                        <label>Set A Checkbox 03 - Sub 1</label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" id="progchecker-page-about-a3-sub2">
-                                        <label>Set A Checkbox 03 - Sub 2</label>
-                                    </li>
-                                    <li>
-                                        <input type="checkbox" id="progchecker-page-about-a3-sub3">
-                                        <label>Set A Checkbox 03 - Sub 3</label>
-                                    </li>
-                                </ul>
-
-                            </li>
-                        </ul>
-                    </div>
-
-                    <div class="checklist-progressbar">
-                        <h3>Set B</h3>
-                        <div class="progressbar">
-                            <div class="progressbar-inner"></div>
-                            <div class="progressbar-value"></div>
-                        </div>
-                        <ul>
-                            <li>
-                                <input type="checkbox" id="progchecker-page-about-b1">
-                                <label>Set B Checkbox 01</label>
-                            </li>
-                            <li>
-                                <input type="checkbox" id="progchecker-page-about-b2">
-                                <label>Set B Checkbox 02</label>
-                            </li>
-                            <li>
-                                <input type="checkbox" id="progchecker-page-about-b3">
-                                <label>Set B Checkbox 03</label>
-                            </li>
-                        </ul>
-                    </div>
 
                 </div>
             </section>
 
             <section id="schedule">
                 <div class="container full-width fadeandscaleIn">
+
+                    <h2 class="sectionhead">Calendar</h2>
 
                     <div id='calendar'></div>
 
@@ -468,9 +255,88 @@
                 </div>
             </section>
 
+            <section id="checkboxes">
+                <div class="container full-width fadeandscaleIn">
+
+                    <h2 class="sectionhead">Checkbox Lists with Progress Bar Indicators</h2>
+
+                    <div class="row">
+                        <div class="one-half column">
+
+                            <div class="checklist-progressbar">
+                                <h3>Set A</h3>
+                                <div class="progressbar">
+                                    <div class="progressbar-inner"></div>
+                                    <div class="progressbar-value"></div>
+                                </div>
+                                <ul>
+                                    <li>
+                                        <input type="checkbox" id="progchecker-page-red-a1">
+                                        <label>Set A Checkbox 01</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="progchecker-page-red-a2">
+                                        <label>Set A Checkbox 02</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="progchecker-page-red-a3">
+                                        <label>Set A Checkbox 03</label>
+
+                                        <ul>
+                                            <li>
+                                                <input type="checkbox" id="progchecker-page-red-a3-sub1">
+                                                <label>Set A Checkbox 03 - Sub 1</label>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" id="progchecker-page-red-a3-sub2">
+                                                <label>Set A Checkbox 03 - Sub 2</label>
+                                            </li>
+                                            <li>
+                                                <input type="checkbox" id="progchecker-page-red-a3-sub3">
+                                                <label>Set A Checkbox 03 - Sub 3</label>
+                                            </li>
+                                        </ul>
+
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                        <div class="one-half column">
+
+                            <div class="checklist-progressbar">
+                                <h3>Set B</h3>
+                                <div class="progressbar">
+                                    <div class="progressbar-inner"></div>
+                                    <div class="progressbar-value"></div>
+                                </div>
+                                <ul>
+                                    <li>
+                                        <input type="checkbox" id="progchecker-page-red-b1">
+                                        <label>Set B Checkbox 01</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="progchecker-page-red-b2">
+                                        <label>Set B Checkbox 02</label>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" id="progchecker-page-red-b3">
+                                        <label>Set B Checkbox 03</label>
+                                    </li>
+                                </ul>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </section>
+
             <section id="links">
                 <div class="container full-width">
-                    <h2 class="sectionhead">Link Lists</h2>
+                    <h2 class="sectionhead">Links</h2>
                     <ul class="linklist">
                         <li><a href="#">Lorem Ipsum</a></li>
                         <li><a href="#">Et Dolorem</a></li>
@@ -493,134 +359,10 @@
                 </div>
             </section>
 
-            <section id="accordians">
-                <div class="container full-width">
-
-
-                    <h2 class="sectionhead">Accordians</h2>
-
-                    <div class="accordian">
-                        <h3>Accordian <span class="light">Heading</span>
-                            <div class="arrow"></div>
-                        </h3>
-                        <div class="collapsible">
-                            <p>Collapsible content. Lorem ipsum et dolorem. Collapsible content. Lorem ipsum et
-                                dolorem. Collapsible content. Lorem ipsum et dolorem. Collapsible content. Lorem
-                                ipsum et dolorem. Collapsible content. Lorem ipsum et dolorem. Collapsible content.
-                                Lorem ipsum et dolorem. </p>
-                        </div>
-                    </div>
-                    <div class="accordian">
-                        <h3>Accordian <span class="light">Heading</span>
-                            <div class="arrow"></div>
-                        </h3>
-                        <div class="collapsible">
-                            <p>Collapsible content. Lorem ipsum et dolorem. Collapsible content. Lorem ipsum et
-                                dolorem. Collapsible content. Lorem ipsum et dolorem. Collapsible content. Lorem
-                                ipsum et dolorem. Collapsible content. Lorem ipsum et dolorem. Collapsible content.
-                                Lorem ipsum et dolorem. </p>
-                        </div>
-                    </div>
-                    <div class="accordian">
-                        <h3>Accordian <span class="light">Heading</span>
-                            <div class="arrow"></div>
-                        </h3>
-                        <div class="collapsible">
-                            <p>Collapsible content. Lorem ipsum et dolorem. Collapsible content. Lorem ipsum et
-                                dolorem. Collapsible content. Lorem ipsum et dolorem. Collapsible content. Lorem
-                                ipsum et dolorem. Collapsible content. Lorem ipsum et dolorem. Collapsible content.
-                                Lorem ipsum et dolorem. </p>
-                        </div>
-                    </div>
-
-
-                </div>
-            </section>
-
-            <section class="video-bg darksection">
-
-                <div class="video-bg-topcontent">
-                    <h1>A Video Background Test</h1>
-                    <p>Youtube video in the background + HTML content on top</p>
-                </div>
-
-                <div class="video-bg-wrapper">
-                    <iframe
-                        src="https://www.youtube.com/embed/aavIc4zoCaQ?version=3&loop=1&playlist=aavIc4zoCaQ&rel=0&autoplay=1&mute=1&start=78&end=95&controls=0&fs=0&vq=small"
-                        frameborder="0" allowfullscreen></iframe>
-                </div>
-
-            </section>
-
-            <section id="funstuff" class="bg-white">
-
-                <div class="container">
-
-
-                    <h2 class="sectionhead">Text Animations & Fun Stuff</h2>
-
-                    <div class="rotating-text">
-                        <div class="stationary-text">
-                            <p>Rotaing</p>
-                        </div>
-                        <div class="rotating-item-wrapper">
-                            <div class="rotating-items">
-                                Messages<br />
-                                To Communicate<br />
-                                Nine (9)<br />
-                                Different Words<br />
-                                If You Need<br />
-                                Less or More<br />
-                                Than Nine Words<br />
-                                Then You'll You Need to<br />
-                                Adjust Manually
-                            </div>
-                        </div>
-                    </div>
-
-                    <h1 class="text-mask-reveal">
-                        <span>Animated Text Reveal Effect</span>
-                        <span>w/ solid-colored pseudo elements as masks.</span>
-                    </h1>
-
-                    <h1 class="popout-text">
-                        <span>P</span>
-                        <span>O</span>
-                        <span>P</span>
-                        <span>O</span>
-                        <span>U</span>
-                        <span>T</span><br />
-                        <span>T</span>
-                        <span>E</span>
-                        <span>X</span>
-                        <span>T</span>
-                    </h1>
-                </div>
-            </section>
-
-
-
-
         </main>
 
 
         <footer class="site-footer darksection">
-
-            <section class="full-size not-full-height ">
-                <ul class="grid-of-cards inline fadeandscaleIn-noscroll">
-                    <li><a href="../subpageblue/index.html" class="bg-blue">Sub<span> Page</span></a></li>
-                    <li><a href="../subpagesky/index.html" class="bg-sky">Sub<span> Page</span></a></li>
-                    <li><a href="../subpagegreen/index.html" class="bg-green">Sub<span> Page</span></a></li>
-                    <li><a href="../subpagelime/index.html" class="bg-lime">Sub<span> Page</span></a></li>
-                    <li><a href="../subpageorange/index.html" class="bg-orange">Sub<span> Page</span></a>
-                    </li>
-                    <li><a href="../subpagepeach/index.html" class="bg-peach">Sub<span> Page</span></a></li>
-                    <li><a href="../subpagered/index.html" class="bg-red">Sub<span> Page</span></a></li>
-                    <li><a href="../subpagepink/index.html" class="bg-pink">Sub<span> Page</span></a></li>
-                    <li><a href="../subpagepurple/index.html" class="bg-purple">Sub<span> Page</span></a></li>
-                </ul>
-            </section>
-
             <div class="container row">
                 <div class="one-half fadeandscaleIn">
 
