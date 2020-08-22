@@ -1671,6 +1671,55 @@ section.not-full-height {
   }
 }
 
+/* SPLT TEXT REVEAL ANIMATION  */
+.split-text-animation {
+  text-align: center;
+}
+
+.split-text-animation span {
+  display: inline-block;
+  overflow:hidden;
+  white-space:nowrap;
+}
+
+.split-text-animation .text-primary { 
+  animation: sta-showup 7s infinite;
+}
+
+.split-text-animation .text-secondary {
+  width:0;
+  animation: sta-reveal 7s infinite;
+}
+
+.split-text-animation .text-secondary span {
+  display: block;
+  margin-left:-50vw;
+  animation: sta-slidein 7s infinite;
+}
+
+@keyframes sta-showup {
+    0% {opacity:0;}
+    20% {opacity:1;}
+    80% {opacity:1;}
+    100% {opacity:0;}
+}
+
+@keyframes sta-slidein {
+    0% { margin-left:-50vw; }
+    20% { margin-left:-50vw; }
+    35% { margin-left:0; }
+    100% { margin-left:0; }
+}
+
+@keyframes sta-reveal {
+    0% {opacity:0;width:0;}
+    20% {opacity:1;width:0;}
+    30% {width: auto;}
+    80% {opacity:1;}
+    100% {opacity:0;width: auto;}
+}
+
+
 
 /* REVEAL ANIMATIONS ON PAGE LOAD AND SCROLL TRIGGERED */
 @keyframes fadeandscaleIn {
@@ -2167,6 +2216,13 @@ width: 100%;
   font-size: 11vw;
 }
 
+#page-contact .hero {
+  background-color: rgba(0, 0, 0,.5);
+  place-items: center;
+}
+#page-contact .hero h1 {
+  font-size: 6vw;
+}
 
 /* BLUE */
 #page-blue .hero,
