@@ -1059,7 +1059,7 @@ section {
 
 section:nth-child(even) {
     /* background-color: var(--color-brand-primary); */
-    background-color: rgba(0, 0, 0, 0);
+    background-color: rgba(0,102,153,.1);
 }
 
 section.full-size {
@@ -1650,6 +1650,27 @@ section.not-full-height {
   background-color: #fff;
 }
 
+/* ANIMATED STRIPES TEXT EFFECT */
+.animated-stripes {
+  font-family: 'Bungee Shade', cursive;
+  text-align: center;
+  font-weight: normal;
+  font-size: 15vw;
+  line-height: 1;
+  margin: 0;
+  background: linear-gradient(-45deg, purple 25%, red 25%, red 50%, black 50%, purple 75%, red 75%, red);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-size: 20px 20px;
+  background-position: 0 0;
+          animation: stripe-animation .75s linear infinite;
+}
+@keyframes stripe-animation {
+  100% {
+    background-position: 20px 0, 20px 0, 20px 0;
+  }
+}
+
 
 /* REVEAL ANIMATIONS ON PAGE LOAD AND SCROLL TRIGGERED */
 @keyframes fadeandscaleIn {
@@ -2044,35 +2065,35 @@ width: 100%;
   background: #68ACD9;
   border-color: #68ACD9; }
 
-  #page-sky #calendar .fc-h-event {
+#page-sky #calendar .fc-h-event {
   background: #4AC0ED;
   border-color: #4AC0ED; }
 
-  #page-green #calendar .fc-h-event {
+#page-green #calendar .fc-h-event {
   background: #63BDA4;
   border-color: #63BDA4; }
 
-  #page-lime #calendar .fc-h-event {
+#page-lime #calendar .fc-h-event {
   background: #B3CD4D;
   border-color: #B3CD4D; }
 
-  #page-orange #calendar .fc-h-event {
+#page-orange #calendar .fc-h-event {
   background: #E2BE28;
   border-color: #E2BE28; }
 
-  #page-peach #calendar .fc-h-event {
+#page-peach #calendar .fc-h-event {
   background: #F5AD6D;
   border-color: #F5AD6D; }
 
-  #page-red #calendar .fc-h-event {
+#page-red #calendar .fc-h-event {
   background: #EE6D72;
   border-color: #EE6D72; }
 
-  #page-pink #calendar .fc-h-event {
+#page-pink #calendar .fc-h-event {
   background: #993333;
   border-color: #993333; }
 
-  #page-purple #calendar .fc-h-event {
+#page-purple #calendar .fc-h-event {
   background: #E29FC6;
   border-color: #E29FC6; }
 
@@ -2111,6 +2132,10 @@ width: 100%;
   );  
 }
 
+#page-home .grid-of-cards {
+  padding: 55px;
+}
+
 #page-menu .site-id a{
   color: black;
 }
@@ -2129,6 +2154,17 @@ width: 100%;
   #page-menu .grid-of-cards {
     min-height: calc(100vh - 5em);
   }
+}
+
+#page-resources .site-id a{
+  color: black;
+}
+#page-resources .hero {
+  background-color: rgb(245, 245, 59);
+    place-items: center;
+}
+#page-resources .hero h1 {
+  font-size: 11vw;
 }
 
 
